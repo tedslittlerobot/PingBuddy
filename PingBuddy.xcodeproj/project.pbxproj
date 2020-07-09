@@ -14,6 +14,13 @@
 		DE94EB3B24B6082400D5621F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE94EB3924B6082400D5621F /* Main.storyboard */; };
 		DE94EB4724B6082500D5621F /* PingBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB4624B6082500D5621F /* PingBuddyTests.swift */; };
 		DE94EB5224B6082500D5621F /* PingBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB5124B6082500D5621F /* PingBuddyUITests.swift */; };
+		DE94EB6124B6196C00D5621F /* PlainSettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6024B6196C00D5621F /* PlainSettingsVM.swift */; };
+		DE94EB6324B61E1800D5621F /* DefaultsSettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6224B61E1800D5621F /* DefaultsSettingsVM.swift */; };
+		DE94EB6624B6209A00D5621F /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6524B6209A00D5621F /* SwiftyPing.swift */; };
+		DE94EB6924B622F400D5621F /* PingerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6824B622F400D5621F /* PingerVM.swift */; };
+		DE94EB6B24B72ACB00D5621F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6A24B72ACB00D5621F /* SettingsView.swift */; };
+		DE94EB6D24B72BBB00D5621F /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6C24B72BBB00D5621F /* StatusView.swift */; };
+		DE94EB6F24B72D2900D5621F /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB6E24B72D2900D5621F /* ToolbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		DE94EB4D24B6082500D5621F /* PingBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE94EB5124B6082500D5621F /* PingBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingBuddyUITests.swift; sourceTree = "<group>"; };
 		DE94EB5324B6082500D5621F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE94EB6024B6196C00D5621F /* PlainSettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainSettingsVM.swift; sourceTree = "<group>"; };
+		DE94EB6224B61E1800D5621F /* DefaultsSettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsSettingsVM.swift; sourceTree = "<group>"; };
+		DE94EB6524B6209A00D5621F /* SwiftyPing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyPing.swift; sourceTree = "<group>"; };
+		DE94EB6824B622F400D5621F /* PingerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingerVM.swift; sourceTree = "<group>"; };
+		DE94EB6A24B72ACB00D5621F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DE94EB6C24B72BBB00D5621F /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		DE94EB6E24B72D2900D5621F /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +112,10 @@
 		DE94EB2F24B6081E00D5621F /* PingBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				DE94EB6724B622D500D5621F /* model */,
+				DE94EB6424B6209000D5621F /* support */,
+				DE94EB5F24B60BA600D5621F /* ui */,
 				DE94EB3024B6081E00D5621F /* AppDelegate.swift */,
-				DE94EB3224B6081E00D5621F /* ContentView.swift */,
-				DE94EB3424B6082400D5621F /* Assets.xcassets */,
 				DE94EB3924B6082400D5621F /* Main.storyboard */,
 				DE94EB3C24B6082400D5621F /* Info.plist */,
 				DE94EB3D24B6082400D5621F /* PingBuddy.entitlements */,
@@ -133,6 +148,36 @@
 				DE94EB5324B6082500D5621F /* Info.plist */,
 			);
 			path = PingBuddyUITests;
+			sourceTree = "<group>";
+		};
+		DE94EB5F24B60BA600D5621F /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				DE94EB3424B6082400D5621F /* Assets.xcassets */,
+				DE94EB3224B6081E00D5621F /* ContentView.swift */,
+				DE94EB6E24B72D2900D5621F /* ToolbarView.swift */,
+				DE94EB6C24B72BBB00D5621F /* StatusView.swift */,
+				DE94EB6A24B72ACB00D5621F /* SettingsView.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		DE94EB6424B6209000D5621F /* support */ = {
+			isa = PBXGroup;
+			children = (
+				DE94EB6524B6209A00D5621F /* SwiftyPing.swift */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		DE94EB6724B622D500D5621F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DE94EB6224B61E1800D5621F /* DefaultsSettingsVM.swift */,
+				DE94EB6024B6196C00D5621F /* PlainSettingsVM.swift */,
+				DE94EB6824B622F400D5621F /* PingerVM.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE94EB6B24B72ACB00D5621F /* SettingsView.swift in Sources */,
 				DE94EB3324B6081E00D5621F /* ContentView.swift in Sources */,
+				DE94EB6F24B72D2900D5621F /* ToolbarView.swift in Sources */,
+				DE94EB6D24B72BBB00D5621F /* StatusView.swift in Sources */,
 				DE94EB3124B6081E00D5621F /* AppDelegate.swift in Sources */,
+				DE94EB6624B6209A00D5621F /* SwiftyPing.swift in Sources */,
+				DE94EB6924B622F400D5621F /* PingerVM.swift in Sources */,
+				DE94EB6124B6196C00D5621F /* PlainSettingsVM.swift in Sources */,
+				DE94EB6324B61E1800D5621F /* DefaultsSettingsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

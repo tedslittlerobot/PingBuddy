@@ -1,21 +1,29 @@
-//
-//  StatusView.swift
-//  PingBuddy
-//
-//  Created by Stefan Horner on 09/07/2020.
-//  Copyright © 2020 Stefan Horner. All rights reserved.
-//
-
 import SwiftUI
 
 struct StatusView: View {
+    @ObservedObject var pinger: PingerVM
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Status")
+                .padding()
+                .font(.title)
+
+            HStack {
+                Text("Target: \(pinger.target ?? "n/a")")
+                Text("Status: \(pinger.status != nil ? pinger.status!.rawValue : "n/a")")
+            }.padding()
+
+            Text("Duration: \(pinger.humanDuration)")
+                .padding(.top)
+            Text("Speed Class: \(pinger.speed != nil ? pinger.speed!.rawValue : "n/a")")
+                .padding(.bottom)
+        }
     }
 }
 
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusView()
+        StatusView(pinger: PingerVM(settings: PlainSettingsVM(target: "foobar")))
     }
 }

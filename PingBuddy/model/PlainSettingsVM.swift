@@ -1,16 +1,11 @@
 import Foundation
 import SwiftUI
 
-class SettingsVM: ObservableObject {
-//    @Published var target: String
-
+class PlainSettingsVM: ObservableObject {
     var target: String {
-        willSet {
-            objectWillChange.send()
-        }
-
         didSet {
-            print("changed target to \(target)!")
+            objectWillChange.send()
+            save()
         }
     }
 

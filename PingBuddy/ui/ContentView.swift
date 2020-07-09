@@ -1,23 +1,32 @@
-//
-//  ContentView.swift
-//  PingBuddy
-//
-//  Created by Stefan Horner on 08/07/2020.
-//  Copyright © 2020 Stefan Horner. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var settings: PlainSettingsVM
+    @ObservedObject var pinger: PingerVM
+
+    init(pinger: PingerVM) {
+        self.settings = pinger.settings
+        self.pinger = pinger
+    }
+
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack {
+            SettingsView(settings: settings)
+
+            Divider()
+
+            StatusView(pinger: pinger)
+
+            Divider()
+
+            ToolbarView()
+        }
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(pinger: PingerVM(settings: PlainSettingsVM(target: "8.8.8.8")))
     }
 }
