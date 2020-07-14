@@ -1,12 +1,5 @@
-//
-//  SettingsView.swift
-//  PingBuddy
-//
-//  Created by Stefan Horner on 09/07/2020.
-//  Copyright © 2020 Stefan Horner. All rights reserved.
-//
-
 import SwiftUI
+import Combine
 
 struct SettingsView: View {
     @ObservedObject var settings: PlainSettingsVM
@@ -41,12 +34,74 @@ struct SettingsView: View {
                 TextField("Ping Target", text: $settings.target)
                     .padding()
             }
+
+            HStack {
+                VStack {
+                    Text("Interval:")
+                    TextField("Interval", text: $settings.interval)
+                }
+                .onReceive(Just(self.settings.interval)) { newValue in
+                    let filtered = newValue.filter { "0123456789.".contains($0) }
+                    if filtered != newValue {
+                        self.settings.interval = filtered
+                    }
+                }
+                VStack {
+                    Text("Timeout:")
+                    TextField("Timeout", text: $settings.timeout)
+                }
+                .onReceive(Just(self.settings.timeout)) { newValue in
+                    let filtered = newValue.filter { "0123456789.".contains($0) }
+                    if filtered != newValue {
+                        self.settings.timeout = filtered
+                    }
+                }
+            }.padding()
+
+            HStack {
+                VStack {
+                    Text("Slow Time:")
+                    TextField("Slow Time", text: $settings.slowTime)
+                }
+                .onReceive(Just(self.settings.slowTime)) { newValue in
+                    let filtered = newValue.filter { "0123456789.".contains($0) }
+                    if filtered != newValue {
+                        self.settings.slowTime = filtered
+                    }
+                }
+                VStack {
+                    Text("OK Time:")
+                    TextField("OK Time", text: $settings.okTime)
+                }
+                .onReceive(Just(self.settings.okTime)) { newValue in
+                    let filtered = newValue.filter { "0123456789.".contains($0) }
+                    if filtered != newValue {
+                        self.settings.okTime = filtered
+                    }
+                }
+                VStack {
+                    Text("Fast Time:")
+                    TextField("Fast Time", text: $settings.fastTime)
+                }
+                .onReceive(Just(self.settings.fastTime)) { newValue in
+                    let filtered = newValue.filter { "0123456789.".contains($0) }
+                    if filtered != newValue {
+                        self.settings.fastTime = filtered
+                    }
+                }
+            }.padding()
+
+            Button(action: {
+                self.settings.reset()
+            }) {
+                Text("Reset Settings")
+            }
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(settings: PlainSettingsVM(target: "foobar"))
+        SettingsView(settings: .sample)
     }
 }

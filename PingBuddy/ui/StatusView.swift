@@ -9,21 +9,54 @@ struct StatusView: View {
                 .padding()
                 .font(.title)
 
-            HStack {
-                Text("Target: \(pinger.target ?? "n/a")")
-                Text("Status: \(pinger.status != nil ? pinger.status!.rawValue : "n/a")")
-            }.padding()
+            if pinger.pong == nil {
+                Text("No Response")
+            } else {
+                VStack {
+                    HStack {
+                        Text("Target: \(pinger.pong!.target)")
+                        Text("Status: \(pinger.pong!.status.rawValue)")
+                    }.padding()
 
+                    if pinger.pong!.status == .success {
+                        success
+                    } else if pinger.pong!.status == .failure {
+                        failed
+                    } else if pinger.pong!.status == .off {
+                        off
+                    }
+                }
+            }
+        }
+    }
+
+    var failed: some View {
+        Text("Ping Failed")
+    }
+
+    var off: some View {
+        Text("Ping Not Running")
+    }
+
+    var success: some View {
+        VStack {
             Text("Duration: \(pinger.humanDuration)")
-                .padding(.top)
-            Text("Speed Class: \(pinger.speed != nil ? pinger.speed!.rawValue : "n/a")")
-                .padding(.bottom)
+            Text("Speed Class: \(pinger.pong!.speed != nil ? pinger.pong!.speed!.rawValue : "n/a")")
+                    .padding(.bottom)
         }
     }
 }
 
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusView(pinger: PingerVM(settings: PlainSettingsVM(target: "foobar")))
+        VStack {
+            StatusView(pinger: PingerVM(settings: .sample))
+            Divider()
+            StatusView(pinger: PingerVM(settings: .sample, pong: .off(settings: .sample)))
+            Divider()
+            StatusView(pinger: PingerVM(settings: .sample, pong: .failed(settings: .sample)))
+            Divider()
+            StatusView(pinger: PingerVM(settings: .sample, pong: .sample))
+        }
     }
 }

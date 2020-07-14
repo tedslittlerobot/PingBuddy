@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE7F31B024BC500900F9A8B5 /* Pinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31AF24BC500900F9A8B5 /* Pinger.swift */; };
+		DE7F31B224BC685300F9A8B5 /* UserDefaults+has.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */; };
+		DE7F31B624BC99D200F9A8B5 /* NSStatusItem+update.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */; };
+		DE85A47024BDB7B800251A63 /* UserDefault+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85A46F24BDB7B800251A63 /* UserDefault+Settings.swift */; };
 		DE94EB3124B6081E00D5621F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB3024B6081E00D5621F /* AppDelegate.swift */; };
 		DE94EB3324B6081E00D5621F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE94EB3224B6081E00D5621F /* ContentView.swift */; };
 		DE94EB3524B6082400D5621F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE94EB3424B6082400D5621F /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE7F31AF24BC500900F9A8B5 /* Pinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinger.swift; sourceTree = "<group>"; };
+		DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+has.swift"; sourceTree = "<group>"; };
+		DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+update.swift"; sourceTree = "<group>"; };
+		DE85A46F24BDB7B800251A63 /* UserDefault+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Settings.swift"; sourceTree = "<group>"; };
 		DE94EB2D24B6081E00D5621F /* PingBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE94EB3024B6081E00D5621F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE94EB3224B6081E00D5621F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -166,6 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				DE94EB6524B6209A00D5621F /* SwiftyPing.swift */,
+				DE7F31AF24BC500900F9A8B5 /* Pinger.swift */,
+				DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */,
+				DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */,
+				DE85A46F24BDB7B800251A63 /* UserDefault+Settings.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -317,8 +329,12 @@
 				DE94EB6D24B72BBB00D5621F /* StatusView.swift in Sources */,
 				DE94EB3124B6081E00D5621F /* AppDelegate.swift in Sources */,
 				DE94EB6624B6209A00D5621F /* SwiftyPing.swift in Sources */,
+				DE7F31B024BC500900F9A8B5 /* Pinger.swift in Sources */,
+				DE85A47024BDB7B800251A63 /* UserDefault+Settings.swift in Sources */,
+				DE7F31B224BC685300F9A8B5 /* UserDefaults+has.swift in Sources */,
 				DE94EB6924B622F400D5621F /* PingerVM.swift in Sources */,
 				DE94EB6124B6196C00D5621F /* PlainSettingsVM.swift in Sources */,
+				DE7F31B624BC99D200F9A8B5 /* NSStatusItem+update.swift in Sources */,
 				DE94EB6324B61E1800D5621F /* DefaultsSettingsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +502,7 @@
 				CODE_SIGN_ENTITLEMENTS = PingBuddy/PingBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"PingBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 8XUBC9X249;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -509,6 +526,7 @@
 				CODE_SIGN_ENTITLEMENTS = PingBuddy/PingBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"PingBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 8XUBC9X249;
 				ENABLE_HARDENED_RUNTIME = YES;

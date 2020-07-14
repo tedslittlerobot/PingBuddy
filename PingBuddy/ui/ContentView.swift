@@ -11,11 +11,17 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            SettingsView(settings: settings)
+            TabView {
+                StatusView(pinger: pinger)
+                    .tabItem {
+                        Text("Status")
+                    }
 
-            Divider()
-
-            StatusView(pinger: pinger)
+                SettingsView(settings: settings)
+                    .tabItem {
+                        Text("Settings")
+                    }
+            }.padding()
 
             Divider()
 
@@ -27,6 +33,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(pinger: PingerVM(settings: PlainSettingsVM(target: "8.8.8.8")))
+        ContentView(pinger: PingerVM(settings: .sample))
     }
 }

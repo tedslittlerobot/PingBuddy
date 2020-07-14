@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         let contentView = ContentView(pinger: pinger)
         popover = NSPopover()
 
-        popover.contentSize = NSSize(width: 500, height: 500)
+        popover.contentSize = NSSize(width: 500, height: 550)
         popover.behavior = .transient
         popover.contentViewController = NSHostingController(rootView: contentView)
 
@@ -49,7 +49,4 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
-
