@@ -10,6 +10,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var statusBarItem: NSStatusItem!
     var pinger: PingerVM!
 
+    let launcher = LauncherManager(uri: "com.tlr.PingBuddyLauncher")
+
     @objc func togglePopover(_ sender: AnyObject?) {
         if let button = self.statusBarItem.button {
             if self.popover.isShown {
@@ -42,6 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
 
         pinger.subscribe().ping()
+        launcher.register()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

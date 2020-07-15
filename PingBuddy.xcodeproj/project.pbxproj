@@ -12,6 +12,16 @@
 		DE44DFCD24BF07B700F46B2C /* Pinger+TimeBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFCC24BF07B700F46B2C /* Pinger+TimeBounds.swift */; };
 		DE44DFCF24BF07CF00F46B2C /* Pinger+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFCE24BF07CF00F46B2C /* Pinger+Status.swift */; };
 		DE44DFD124BF07D700F46B2C /* Pinger+Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFD024BF07D700F46B2C /* Pinger+Speed.swift */; };
+		DE44DFD924BF09E100F46B2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFD824BF09E100F46B2C /* AppDelegate.swift */; };
+		DE44DFE024BF09E400F46B2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE44DFDF24BF09E400F46B2C /* Preview Assets.xcassets */; };
+		DE44DFE324BF09E400F46B2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE44DFE124BF09E400F46B2C /* Main.storyboard */; };
+		DE44DFEA24BF0E3800F46B2C /* PingBuddyLauncher.app in Copy Files */ = {isa = PBXBuildFile; fileRef = DE44DFD624BF09E100F46B2C /* PingBuddyLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DE44DFED24BF0E6500F46B2C /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE44DFEC24BF0E6500F46B2C /* ServiceManagement.framework */; };
+		DE44DFF024BF0FBA00F46B2C /* LauncherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFEF24BF0FBA00F46B2C /* LauncherManager.swift */; };
+		DE44DFF724BF11EC00F46B2C /* Notification+Name-Comms.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFF624BF11EC00F46B2C /* Notification+Name-Comms.swift */; };
+		DE44DFF824BF11EC00F46B2C /* Notification+Name-Comms.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFF624BF11EC00F46B2C /* Notification+Name-Comms.swift */; };
+		DE44DFFA24BF125400F46B2C /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFF924BF125400F46B2C /* Launcher.swift */; };
+		DE44DFFB24BF125400F46B2C /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFF924BF125400F46B2C /* Launcher.swift */; };
 		DE7F31B024BC500900F9A8B5 /* Pinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31AF24BC500900F9A8B5 /* Pinger.swift */; };
 		DE7F31B224BC685300F9A8B5 /* UserDefaults+has.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */; };
 		DE7F31B624BC99D200F9A8B5 /* NSStatusItem+update.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */; };
@@ -49,12 +59,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DE44DFE924BF0B4200F46B2C /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				DE44DFEA24BF0E3800F46B2C /* PingBuddyLauncher.app in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DE44DFC824BF077A00F46B2C /* Pinger+Pong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Pong.swift"; sourceTree = "<group>"; };
 		DE44DFCA24BF07A300F46B2C /* Pinger+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Settings.swift"; sourceTree = "<group>"; };
 		DE44DFCC24BF07B700F46B2C /* Pinger+TimeBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+TimeBounds.swift"; sourceTree = "<group>"; };
 		DE44DFCE24BF07CF00F46B2C /* Pinger+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Status.swift"; sourceTree = "<group>"; };
 		DE44DFD024BF07D700F46B2C /* Pinger+Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Speed.swift"; sourceTree = "<group>"; };
+		DE44DFD624BF09E100F46B2C /* PingBuddyLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingBuddyLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE44DFD824BF09E100F46B2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE44DFDF24BF09E400F46B2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE44DFE224BF09E400F46B2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE44DFE424BF09E400F46B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE44DFE524BF09E400F46B2C /* PingBuddyLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PingBuddyLauncher.entitlements; sourceTree = "<group>"; };
+		DE44DFEC24BF0E6500F46B2C /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		DE44DFEF24BF0FBA00F46B2C /* LauncherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherManager.swift; sourceTree = "<group>"; };
+		DE44DFF624BF11EC00F46B2C /* Notification+Name-Comms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name-Comms.swift"; sourceTree = "<group>"; };
+		DE44DFF924BF125400F46B2C /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		DE7F31AF24BC500900F9A8B5 /* Pinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinger.swift; sourceTree = "<group>"; };
 		DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+has.swift"; sourceTree = "<group>"; };
 		DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+update.swift"; sourceTree = "<group>"; };
@@ -83,10 +117,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE44DFD324BF09E100F46B2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE94EB2A24B6081E00D5621F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE44DFED24BF0E6500F46B2C /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,13 +149,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE44DFD724BF09E100F46B2C /* PingBuddyLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				DE44DFD824BF09E100F46B2C /* AppDelegate.swift */,
+				DE44DFF924BF125400F46B2C /* Launcher.swift */,
+				DE44DFE124BF09E400F46B2C /* Main.storyboard */,
+				DE44DFE424BF09E400F46B2C /* Info.plist */,
+				DE44DFE524BF09E400F46B2C /* PingBuddyLauncher.entitlements */,
+				DE44DFDE24BF09E400F46B2C /* Preview Content */,
+			);
+			path = PingBuddyLauncher;
+			sourceTree = "<group>";
+		};
+		DE44DFDE24BF09E400F46B2C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE44DFDF24BF09E400F46B2C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE44DFEB24BF0E6500F46B2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE44DFEC24BF0E6500F46B2C /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE44DFF524BF11C400F46B2C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DE44DFF624BF11EC00F46B2C /* Notification+Name-Comms.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DE44DFFC24BF153A00F46B2C /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DE94EB6524B6209A00D5621F /* SwiftyPing.swift */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
 		DE94EB2424B6081E00D5621F = {
 			isa = PBXGroup;
 			children = (
 				DE94EB2F24B6081E00D5621F /* PingBuddy */,
+				DE44DFD724BF09E100F46B2C /* PingBuddyLauncher */,
+				DE44DFF524BF11C400F46B2C /* Shared */,
 				DE94EB4524B6082500D5621F /* PingBuddyTests */,
 				DE94EB5024B6082500D5621F /* PingBuddyUITests */,
 				DE94EB2E24B6081E00D5621F /* Products */,
+				DE44DFEB24BF0E6500F46B2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +213,7 @@
 				DE94EB2D24B6081E00D5621F /* PingBuddy.app */,
 				DE94EB4224B6082500D5621F /* PingBuddyTests.xctest */,
 				DE94EB4D24B6082500D5621F /* PingBuddyUITests.xctest */,
+				DE44DFD624BF09E100F46B2C /* PingBuddyLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +274,8 @@
 		DE94EB6424B6209000D5621F /* support */ = {
 			isa = PBXGroup;
 			children = (
-				DE94EB6524B6209A00D5621F /* SwiftyPing.swift */,
+				DE44DFFC24BF153A00F46B2C /* vendor */,
+				DE44DFEF24BF0FBA00F46B2C /* LauncherManager.swift */,
 				DE7F31AF24BC500900F9A8B5 /* Pinger.swift */,
 				DE44DFD024BF07D700F46B2C /* Pinger+Speed.swift */,
 				DE44DFCE24BF07CF00F46B2C /* Pinger+Status.swift */,
@@ -210,6 +302,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE44DFD524BF09E100F46B2C /* PingBuddyLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE44DFE624BF09E400F46B2C /* Build configuration list for PBXNativeTarget "PingBuddyLauncher" */;
+			buildPhases = (
+				DE44DFD224BF09E100F46B2C /* Sources */,
+				DE44DFD324BF09E100F46B2C /* Frameworks */,
+				DE44DFD424BF09E100F46B2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PingBuddyLauncher;
+			productName = PingBuddyLauncher;
+			productReference = DE44DFD624BF09E100F46B2C /* PingBuddyLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DE94EB2C24B6081E00D5621F /* PingBuddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE94EB5624B6082500D5621F /* Build configuration list for PBXNativeTarget "PingBuddy" */;
@@ -217,6 +326,7 @@
 				DE94EB2924B6081E00D5621F /* Sources */,
 				DE94EB2A24B6081E00D5621F /* Frameworks */,
 				DE94EB2B24B6081E00D5621F /* Resources */,
+				DE44DFE924BF0B4200F46B2C /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -273,6 +383,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Stefan Horner";
 				TargetAttributes = {
+					DE44DFD524BF09E100F46B2C = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					DE94EB2C24B6081E00D5621F = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -300,6 +413,7 @@
 			projectRoot = "";
 			targets = (
 				DE94EB2C24B6081E00D5621F /* PingBuddy */,
+				DE44DFD524BF09E100F46B2C /* PingBuddyLauncher */,
 				DE94EB4124B6082500D5621F /* PingBuddyTests */,
 				DE94EB4C24B6082500D5621F /* PingBuddyUITests */,
 			);
@@ -307,6 +421,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE44DFD424BF09E100F46B2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE44DFE324BF09E400F46B2C /* Main.storyboard in Resources */,
+				DE44DFE024BF09E400F46B2C /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE94EB2B24B6081E00D5621F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +457,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE44DFD224BF09E100F46B2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE44DFD924BF09E100F46B2C /* AppDelegate.swift in Sources */,
+				DE44DFFB24BF125400F46B2C /* Launcher.swift in Sources */,
+				DE44DFF824BF11EC00F46B2C /* Notification+Name-Comms.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE94EB2924B6081E00D5621F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +474,7 @@
 				DE44DFD124BF07D700F46B2C /* Pinger+Speed.swift in Sources */,
 				DE94EB6B24B72ACB00D5621F /* SettingsView.swift in Sources */,
 				DE94EB3324B6081E00D5621F /* ContentView.swift in Sources */,
+				DE44DFF024BF0FBA00F46B2C /* LauncherManager.swift in Sources */,
 				DE94EB6F24B72D2900D5621F /* ToolbarView.swift in Sources */,
 				DE94EB6D24B72BBB00D5621F /* StatusView.swift in Sources */,
 				DE94EB3124B6081E00D5621F /* AppDelegate.swift in Sources */,
@@ -350,11 +484,13 @@
 				DE7F31B224BC685300F9A8B5 /* UserDefaults+has.swift in Sources */,
 				DE94EB6924B622F400D5621F /* PingerVM.swift in Sources */,
 				DE94EB6124B6196C00D5621F /* PlainSettingsVM.swift in Sources */,
+				DE44DFF724BF11EC00F46B2C /* Notification+Name-Comms.swift in Sources */,
 				DE7F31B624BC99D200F9A8B5 /* NSStatusItem+update.swift in Sources */,
 				DE44DFCD24BF07B700F46B2C /* Pinger+TimeBounds.swift in Sources */,
 				DE44DFCF24BF07CF00F46B2C /* Pinger+Status.swift in Sources */,
 				DE44DFC924BF077A00F46B2C /* Pinger+Pong.swift in Sources */,
 				DE44DFCB24BF07A300F46B2C /* Pinger+Settings.swift in Sources */,
+				DE44DFFA24BF125400F46B2C /* Launcher.swift in Sources */,
 				DE94EB6324B61E1800D5621F /* DefaultsSettingsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +527,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DE44DFE124BF09E400F46B2C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE44DFE224BF09E400F46B2C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		DE94EB3924B6082400D5621F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -402,6 +546,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE44DFE724BF09E400F46B2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PingBuddyLauncher/PingBuddyLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"PingBuddyLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = 8XUBC9X249;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PingBuddyLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlr.PingBuddyLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DE44DFE824BF09E400F46B2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PingBuddyLauncher/PingBuddyLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"PingBuddyLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = 8XUBC9X249;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PingBuddyLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tlr.PingBuddyLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		DE94EB5424B6082500D5621F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -522,7 +714,7 @@
 				CODE_SIGN_ENTITLEMENTS = PingBuddy/PingBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"PingBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 8XUBC9X249;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -533,6 +725,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tlr.PingBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -546,7 +739,7 @@
 				CODE_SIGN_ENTITLEMENTS = PingBuddy/PingBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"PingBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 8XUBC9X249;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -557,6 +750,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tlr.PingBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -650,6 +844,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE44DFE624BF09E400F46B2C /* Build configuration list for PBXNativeTarget "PingBuddyLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE44DFE724BF09E400F46B2C /* Debug */,
+				DE44DFE824BF09E400F46B2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DE94EB2824B6081E00D5621F /* Build configuration list for PBXProject "PingBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
