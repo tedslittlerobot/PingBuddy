@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE44DFC924BF077A00F46B2C /* Pinger+Pong.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFC824BF077A00F46B2C /* Pinger+Pong.swift */; };
+		DE44DFCB24BF07A300F46B2C /* Pinger+Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFCA24BF07A300F46B2C /* Pinger+Settings.swift */; };
+		DE44DFCD24BF07B700F46B2C /* Pinger+TimeBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFCC24BF07B700F46B2C /* Pinger+TimeBounds.swift */; };
+		DE44DFCF24BF07CF00F46B2C /* Pinger+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFCE24BF07CF00F46B2C /* Pinger+Status.swift */; };
+		DE44DFD124BF07D700F46B2C /* Pinger+Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44DFD024BF07D700F46B2C /* Pinger+Speed.swift */; };
 		DE7F31B024BC500900F9A8B5 /* Pinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31AF24BC500900F9A8B5 /* Pinger.swift */; };
 		DE7F31B224BC685300F9A8B5 /* UserDefaults+has.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */; };
 		DE7F31B624BC99D200F9A8B5 /* NSStatusItem+update.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */; };
@@ -45,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE44DFC824BF077A00F46B2C /* Pinger+Pong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Pong.swift"; sourceTree = "<group>"; };
+		DE44DFCA24BF07A300F46B2C /* Pinger+Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Settings.swift"; sourceTree = "<group>"; };
+		DE44DFCC24BF07B700F46B2C /* Pinger+TimeBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+TimeBounds.swift"; sourceTree = "<group>"; };
+		DE44DFCE24BF07CF00F46B2C /* Pinger+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Status.swift"; sourceTree = "<group>"; };
+		DE44DFD024BF07D700F46B2C /* Pinger+Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pinger+Speed.swift"; sourceTree = "<group>"; };
 		DE7F31AF24BC500900F9A8B5 /* Pinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinger.swift; sourceTree = "<group>"; };
 		DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+has.swift"; sourceTree = "<group>"; };
 		DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+update.swift"; sourceTree = "<group>"; };
@@ -175,6 +185,11 @@
 			children = (
 				DE94EB6524B6209A00D5621F /* SwiftyPing.swift */,
 				DE7F31AF24BC500900F9A8B5 /* Pinger.swift */,
+				DE44DFD024BF07D700F46B2C /* Pinger+Speed.swift */,
+				DE44DFCE24BF07CF00F46B2C /* Pinger+Status.swift */,
+				DE44DFCC24BF07B700F46B2C /* Pinger+TimeBounds.swift */,
+				DE44DFCA24BF07A300F46B2C /* Pinger+Settings.swift */,
+				DE44DFC824BF077A00F46B2C /* Pinger+Pong.swift */,
 				DE7F31B124BC685300F9A8B5 /* UserDefaults+has.swift */,
 				DE7F31B524BC99D200F9A8B5 /* NSStatusItem+update.swift */,
 				DE85A46F24BDB7B800251A63 /* UserDefault+Settings.swift */,
@@ -323,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE44DFD124BF07D700F46B2C /* Pinger+Speed.swift in Sources */,
 				DE94EB6B24B72ACB00D5621F /* SettingsView.swift in Sources */,
 				DE94EB3324B6081E00D5621F /* ContentView.swift in Sources */,
 				DE94EB6F24B72D2900D5621F /* ToolbarView.swift in Sources */,
@@ -335,6 +351,10 @@
 				DE94EB6924B622F400D5621F /* PingerVM.swift in Sources */,
 				DE94EB6124B6196C00D5621F /* PlainSettingsVM.swift in Sources */,
 				DE7F31B624BC99D200F9A8B5 /* NSStatusItem+update.swift in Sources */,
+				DE44DFCD24BF07B700F46B2C /* Pinger+TimeBounds.swift in Sources */,
+				DE44DFCF24BF07CF00F46B2C /* Pinger+Status.swift in Sources */,
+				DE44DFC924BF077A00F46B2C /* Pinger+Pong.swift in Sources */,
+				DE44DFCB24BF07A300F46B2C /* Pinger+Settings.swift in Sources */,
 				DE94EB6324B61E1800D5621F /* DefaultsSettingsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,6 +22,8 @@ class PingerVM: ObservableObject {
         self.pong = pong
     }
 
+    // MARK: - Settings Subscriber
+
     func subscribe() -> PingerVM {
         if self.cancelObserver != nil {
             return self
@@ -39,6 +41,8 @@ class PingerVM: ObservableObject {
     func unsubscribe() {
         self.cancelObserver?.cancel()
     }
+
+    // MARK: - Ping Helpers
 
     func ping() {
         ping(settings: settings)

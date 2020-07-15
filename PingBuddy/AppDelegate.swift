@@ -10,6 +10,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var statusBarItem: NSStatusItem!
     var pinger: PingerVM!
 
+    @objc func togglePopover(_ sender: AnyObject?) {
+        if let button = self.statusBarItem.button {
+            if self.popover.isShown {
+                self.popover.performClose(sender)
+            } else {
+                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            }
+        }
+    }
+
+    // MARK: - Events & Notifications
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
@@ -29,24 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
              button.action = #selector(togglePopover(_:))
         }
 
-        ping()
-    }
-
-    func ping() {
         pinger.subscribe().ping()
     }
 
-    @objc func togglePopover(_ sender: AnyObject?) {
-        if let button = self.statusBarItem.button {
-            if self.popover.isShown {
-                self.popover.performClose(sender)
-            } else {
-                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
-            }
-        }
-    }
-
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        pinger.unsubscribe()
     }
 }
