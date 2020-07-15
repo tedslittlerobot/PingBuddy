@@ -44,13 +44,23 @@ class PlainSettingsVM: ObservableObject {
         }
     }
 
+    var startAtLaunch: Bool {
+        didSet {
+            objectWillChange.send()
+
+            LauncherManager.launcher.register(enabled: startAtLaunch)
+            save()
+        }
+    }
+
     init(
         target: String,
         interval: TimeInterval,
         timeout: TimeInterval,
         fastTime: TimeInterval,
         okTime: TimeInterval,
-        slowTime: TimeInterval
+        slowTime: TimeInterval,
+        startAtLaunch: Bool
     ) {
         self.target = target
         self.interval = String(interval)
@@ -58,6 +68,7 @@ class PlainSettingsVM: ObservableObject {
         self.fastTime = String(fastTime)
         self.okTime = String(okTime)
         self.slowTime = String(slowTime)
+        self.startAtLaunch = startAtLaunch
     }
 
     func save() {
@@ -88,7 +99,7 @@ class PlainSettingsVM: ObservableObject {
 
     static var sample: PlainSettingsVM {
         PlainSettingsVM(
-            target: "foobar", interval: 1, timeout: 2, fastTime: 3, okTime: 4, slowTime: 5
+            target: "foobar", interval: 1, timeout: 2, fastTime: 3, okTime: 4, slowTime: 5, startAtLaunch: false
         )
     }
 }

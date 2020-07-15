@@ -6,6 +6,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let launcher = Launcher(uri: "com.tlr.PingBuddy", name: "PingBuddy")
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        print("LAUNCHER RUNNING")
         launcher.run()
     }
 

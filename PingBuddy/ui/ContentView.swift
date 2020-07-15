@@ -21,6 +21,9 @@ struct ContentView: View {
                     .tabItem {
                         Text("Settings")
                     }
+                .onAppear {
+                    let _ = self.pinger.subscribe()
+                }
             }.padding()
 
             Divider()

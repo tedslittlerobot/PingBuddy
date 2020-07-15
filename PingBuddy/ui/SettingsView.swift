@@ -95,7 +95,16 @@ struct SettingsView: View {
                 self.settings.reset()
             }) {
                 Text("Reset Settings")
-            }
+                }.padding()
+
+            Divider()
+
+
+            HStack {
+                Toggle(isOn: $settings.startAtLaunch) {
+                    Text("Start App at Startup / Login")
+                }
+            }.padding()
         }
     }
 }

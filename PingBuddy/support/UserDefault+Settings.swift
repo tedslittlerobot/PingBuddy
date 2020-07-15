@@ -7,6 +7,7 @@ extension UserDefaults {
     static var defaultFastTime = TimeInterval(0.001)
     static var defaultOkTime = TimeInterval(0.01)
     static var defaultSlowTime = TimeInterval(0.1)
+    static var defaultStartAtLaunch = false
 
 
     var target: String {
@@ -15,6 +16,15 @@ extension UserDefaults {
         }
         set {
             set(newValue, forKey: "settings/target")
+        }
+    }
+
+    var startAtLaunch: Bool {
+        get {
+            has(key: "settings/startAtLaunch") ? bool(forKey: "settings/startAtLaunch") : UserDefaults.defaultStartAtLaunch
+        }
+        set {
+            set(newValue, forKey: "settings/startAtLaunch")
         }
     }
 

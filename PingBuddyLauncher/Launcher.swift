@@ -10,22 +10,8 @@ class Launcher {
         self.name = name
     }
 
-    @objc func terminate() {
-        NSApp.terminate(nil)
-    }
-
-    func listen() {
-        DistributedNotificationCenter.default().addObserver(self, selector: #selector(self.terminate), name: .killLauncher, object: uri)
-    }
-
-    func appIsRunning() -> Bool {
-        let runningApps = NSWorkspace.shared.runningApplications
-
-        return !runningApps.filter { $0.bundleIdentifier == uri }.isEmpty
-    }
-
     func run() {
-        if appIsRunning() {
+        if targetAppIsRunning() {
             // If the app is already running, we don't need a launcher!
             terminate()
         } else {
@@ -34,6 +20,24 @@ class Launcher {
             // Launch the main app!
             launch()
         }
+    }
+
+    // MARK: - Helpers
+
+    func targetAppIsRunning() -> Bool {
+        let runningApps = NSWorkspace.shared.runningApplications
+
+        return !runningApps.filter { $0.bundleIdentifier == uri }.isEmpty
+    }
+
+    // MARK: - Actions
+
+    @objc func terminate() {
+        NSApp.terminate(nil)
+    }
+
+    func listen() {
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(self.terminate), name: .killLauncher, object: uri)
     }
 
     func launch() {

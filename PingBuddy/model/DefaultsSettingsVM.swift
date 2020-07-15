@@ -11,7 +11,8 @@ class DefaultsSettingsVM: PlainSettingsVM {
             timeout: defaults.timeout,
             fastTime: defaults.fastTime,
             okTime: defaults.okTime,
-            slowTime: defaults.slowTime
+            slowTime: defaults.slowTime,
+            startAtLaunch: defaults.startAtLaunch
         )
     }
 
@@ -22,5 +23,6 @@ class DefaultsSettingsVM: PlainSettingsVM {
         defaults.set(fastTime: TimeInterval(fastTime))
         defaults.set(okTime: TimeInterval(okTime))
         defaults.set(slowTime: TimeInterval(slowTime))
+        defaults.startAtLaunch = startAtLaunch
     }
 }

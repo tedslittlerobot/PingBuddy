@@ -5,24 +5,29 @@ import AppKit
 struct LauncherManager {
     let uri: String
 
-    func register() {
-        SMLoginItemSetEnabled(uri as CFString, true)
+    static let launcher = LauncherManager(uri: "com.tlr.PingBuddyLauncher")
 
-        kill(if: appIsRunning())
+    func register(enabled: Bool) {
+        print("🚀 Registering launcher with status \(enabled)")
+
+        SMLoginItemSetEnabled(uri as CFString, enabled)
+
+        kill(if: targetAppIsRunning())
     }
 
-    func appIsRunning() -> Bool {
+    func targetAppIsRunning() -> Bool {
         let runningApps = NSWorkspace.shared.runningApplications
 
         return !runningApps.filter { $0.bundleIdentifier == uri }.isEmpty
     }
 
     func kill() {
+        print("🚀 Killswitch Engaged")
         DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
     }
 
-    func kill(if comparison: Bool) {
-        if comparison {
+    func kill(if shouldKill: Bool) {
+        if shouldKill {
             kill()
         }
     }
