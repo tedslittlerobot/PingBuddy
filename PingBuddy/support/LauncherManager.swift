@@ -7,6 +7,10 @@ struct LauncherManager {
 
     static let launcher = LauncherManager(uri: "com.tlr.PingBuddyLauncher")
 
+    func enforceSavedOption() {
+        register(enabled: UserDefaults.standard.startAtLogin)
+    }
+
     func register(enabled: Bool) {
         print("🚀 Registering launcher with status \(enabled)")
 

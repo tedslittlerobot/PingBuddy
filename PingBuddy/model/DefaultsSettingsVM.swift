@@ -12,7 +12,7 @@ class DefaultsSettingsVM: PlainSettingsVM {
             fastTime: defaults.fastTime,
             okTime: defaults.okTime,
             slowTime: defaults.slowTime,
-            startAtLaunch: defaults.startAtLaunch
+            startAtLogin: defaults.startAtLogin
         )
     }
 
@@ -23,6 +23,6 @@ class DefaultsSettingsVM: PlainSettingsVM {
         defaults.set(fastTime: TimeInterval(fastTime))
         defaults.set(okTime: TimeInterval(okTime))
         defaults.set(slowTime: TimeInterval(slowTime))
-        defaults.startAtLaunch = startAtLaunch
+        defaults.startAtLogin = startAtLogin
     }
 }

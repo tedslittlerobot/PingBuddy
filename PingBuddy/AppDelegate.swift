@@ -4,11 +4,23 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
-    var window: NSWindow!
-
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
     var pinger: PingerVM!
+
+    // MARK: - Lifecycle
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        createMenuItem()
+        pinger.ping()
+        LauncherManager.launcher.enforceSavedOption()
+    }
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+        pinger.unsubscribe()
+    }
+
+    // MARK: - Helpers
 
     @objc func togglePopover(_ sender: AnyObject?) {
         if let button = self.statusBarItem.button {
@@ -20,12 +32,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
 
-    // MARK: - Events & Notifications
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func createMenuItem() {
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
-        // Create the SwiftUI view that provides the window contents.
         pinger = PingerVM(settings: DefaultsSettingsVM())
         pinger.statusItem = statusBarItem
 
@@ -40,11 +49,5 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
              button.image = NSImage(named: "circle:blue")
              button.action = #selector(togglePopover(_:))
         }
-
-        pinger.ping()
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        pinger.unsubscribe()
     }
 }

@@ -101,7 +101,7 @@ struct SettingsView: View {
 
 
             HStack {
-                Toggle(isOn: $settings.startAtLaunch) {
+                Toggle(isOn: $settings.startAtLogin) {
                     Text("Start App at Startup / Login")
                 }
             }.padding()
