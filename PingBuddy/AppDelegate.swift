@@ -4,37 +4,23 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
-    var window: NSWindow!
-
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
     var pinger: PingerVM!
 
+    // MARK: - Lifecycle
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-
-        // Create the SwiftUI view that provides the window contents.
-        pinger = PingerVM(settings: DefaultsSettingsVM())
-        pinger.statusItem = statusBarItem
-
-        let contentView = ContentView(pinger: pinger)
-        popover = NSPopover()
-
-        popover.contentSize = NSSize(width: 500, height: 550)
-        popover.behavior = .transient
-        popover.contentViewController = NSHostingController(rootView: contentView)
-
-        if let button = statusBarItem.button {
-             button.image = NSImage(named: "circle:blue")
-             button.action = #selector(togglePopover(_:))
-        }
-
-        ping()
+        createMenuItem()
+        pinger.ping()
+        LauncherManager.launcher.enforceSavedOption()
     }
 
-    func ping() {
-        pinger.subscribe().ping()
+    func applicationWillTerminate(_ aNotification: Notification) {
+        pinger.unsubscribe()
     }
+
+    // MARK: - Helpers
 
     @objc func togglePopover(_ sender: AnyObject?) {
         if let button = self.statusBarItem.button {
@@ -46,7 +32,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    func createMenuItem() {
+        statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+
+        pinger = PingerVM(settings: DefaultsSettingsVM())
+        pinger.statusItem = statusBarItem
+
+        let contentView = ContentView(pinger: pinger)
+        popover = NSPopover()
+
+        popover.contentSize = NSSize(width: 500, height: 650)
+        popover.behavior = .transient
+        popover.contentViewController = NSHostingController(rootView: contentView)
+
+        if let button = statusBarItem.button {
+             button.image = NSImage(named: "circle:blue")
+             button.action = #selector(togglePopover(_:))
+        }
     }
 }
